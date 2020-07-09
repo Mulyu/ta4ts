@@ -12,7 +12,7 @@ export class EMAIndicator implements Indicator<number> {
   }
 
   getValue(index: number): number {
-    if (index == 0) {
+    if (index === 0) {
       return this.chart[0];
     } else {
       const prev = this.getValue(index - 1);
