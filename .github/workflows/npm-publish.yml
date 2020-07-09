@@ -1,8 +1,8 @@
 name: npm-publish
 on:
   push:
-    branches:
-      - master # Change this to your default branch
+    tags:
+      - v*
 jobs:
   npm-publish:
     name: npm-publish
@@ -15,12 +15,9 @@ jobs:
         with:
           node-version: 14.5.0
       - run: npm ci
-      - name: Publish if version has been updated
-        uses: pascalgn/npm-publish-action@4f4bf159e299f65d21cd1cbd96fc5d53228036df
-        with: # All of theses inputs are optional
-          tag_name: 'v%s'
-          tag_message: 'v%s'
-          commit_pattern: "^Release (\\S+)"
+      - run: npm run test
+      - run: npm run build
+      - name: Publish
+        run: npm publish
         env: # More info about the environment variables in the README
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
