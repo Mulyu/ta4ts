@@ -21,13 +21,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mulyu/ta-ts.git"
+    "url": "git+https://github.com/Mulyu/ta4ts.git"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/Mulyu/ta-ts/issues"
+    "url": "https://github.com/Mulyu/ta4ts/issues"
   },
-  "homepage": "https://github.com/Mulyu/ta-ts#readme",
+  "homepage": "https://github.com/Mulyu/ta4ts#readme",
   "description": "",
   "devDependencies": {
     "@types/jest": "^26.0.4",
