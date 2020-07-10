@@ -8,16 +8,12 @@ jobs:
     name: npm-publish
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@master
-      - name: Set up Node.js
-        uses: actions/setup-node@master
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
         with:
           node-version: 14.5.0
+          registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: npm run test
-      - run: npm run build
-      - name: Publish
-        run: npm publish
+      - run: npm publish
         env: # More info about the environment variables in the README
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
