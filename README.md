@@ -27,3 +27,5 @@ ta4ts supports indicators as below.
 ```bash
 npm install ta4ts
 ```
+
+_sample_ directory contains any indicator samples.
