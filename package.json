@@ -31,6 +31,7 @@
   "description": "",
   "devDependencies": {
     "@types/jest": "^26.0.4",
+    "eslint": "^8.28.0",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.1",
