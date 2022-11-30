@@ -3,6 +3,8 @@
     "dockerfile": "Dockerfile"
   },
   "extensions": [
-    "dbaeumer.vscode-eslint"
-  ]
+    "dbaeumer.vscode-eslint",
+    "GitHub.copilot"
+  ],
+  "ghcr.io/eitsupi/devcontainer-features/nushell:0": {}
 }
